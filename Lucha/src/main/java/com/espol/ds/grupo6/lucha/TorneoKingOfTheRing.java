@@ -5,15 +5,7 @@
 package com.espol.ds.grupo6.lucha;
 import java.util.ArrayList;
 import java.util.List;
-import tipoLuchadores.Acrobatico;
-import tipoLuchadores.Luchador;
-import tipoLuchadores.PesoPesado;
-import tipoLuchadores.Tecnico;
-import adapter.TecnicoAdapter;
-/**
- *
- * @author sebas
- */
+
 public class TorneoKingOfTheRing {
     public static List<Luchador> luchadores = new ArrayList<>();
         
@@ -38,9 +30,9 @@ public class TorneoKingOfTheRing {
     PesoPesado luchador5 = new PesoPesado("Drew McIntyre", 60.05, 115.90);
     
     luchador1.setPuntosDeAtaque(luchador1.cambioDePuntos());
-    luchador2.setPuntosDeAtaque(new TecnicoAdapter(luchador2).cambioDePuntos());
+    luchador2.setPuntosDeAtaque(luchador2.llaveSubmission());
     luchador3.setPuntosDeAtaque(luchador3.cambioDePuntos());
-    luchador4.setPuntosDeAtaque(new TecnicoAdapter(luchador4).cambioDePuntos());
+    luchador4.setPuntosDeAtaque(luchador4.llaveSubmission());
     luchador5.setPuntosDeAtaque(luchador5.cambioDePuntos());
     
     luchadores.add(luchador1);
