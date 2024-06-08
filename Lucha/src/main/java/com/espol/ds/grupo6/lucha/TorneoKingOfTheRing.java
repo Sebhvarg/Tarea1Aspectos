@@ -9,9 +9,9 @@ import java.util.List;
 public class TorneoKingOfTheRing {
     public static List<Luchador> luchadores = new ArrayList<>();
         
+    static TorneoKingOfTheRing instance = null;
     
-    
-    public TorneoKingOfTheRing(List<Luchador> luchadores) {
+    private TorneoKingOfTheRing(List<Luchador> luchadores) {
         this.luchadores = luchadores;
     }
 
@@ -42,4 +42,12 @@ public class TorneoKingOfTheRing {
     luchadores.add(luchador5);
     }
     
+    public static TorneoKingOfTheRing getInstance(){
+        if(instance == null){
+            instance = new TorneoKingOfTheRing(luchadores){}; 
+        
+        }
+        return instance;
+    
+    }
 }
