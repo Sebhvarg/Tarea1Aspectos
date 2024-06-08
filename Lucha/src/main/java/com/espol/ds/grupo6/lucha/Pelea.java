@@ -14,7 +14,7 @@ import tipoLuchadores.Luchador;
  * @author sebas
  */
 public class Pelea {
-    static TorneoKingOfTheRing torneo = new TorneoKingOfTheRing(luchadores);
+    static TorneoKingOfTheRing torneo = TorneoKingOfTheRing.getInstance();
     private static Luchador luchador1;
     private static Luchador luchador2;
     
